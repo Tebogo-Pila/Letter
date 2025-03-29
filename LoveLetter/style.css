@@ -1,0 +1,195 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Letter Container */
+.letter-container {
+    background-color: #1c1c1c;
+    padding: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Section and Paragraph Styling */
+.letter-section {
+    margin-bottom: 40px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: #444;
+    color: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Interactive Fragment Styling */
+.hidden-fragment {
+    display: none;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ink-btn {
+    background: none;
+    border: none;
+    color: #ff4081;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.interactive-fragment {
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+.dream-image {
+    width: 60%;
+    margin: 15px auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .letter-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .dream-image {
+        width: 80%;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+
+.wax-seal {
+    font-size: 2rem;
+    background-color: #ff4081;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hint {
+    font-size: 0.8em;
+    color: #fff;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* Style the button */
+.love-letter-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2223252c;  /* Red color for the button */
+    color: white;
+    font-size: 18px;
+    font-family: 'Crimson Text', serif;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.love-letter-btn:hover {
+    background-color: #d11800;
+}
+
+/* Hearts container */
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Heart styles */
+.heart {
+    position: absolute;
+    font-size: 34px;
+    animation: pour 5s forwards ease-in-out;
+    opacity: 1;
+}
+
+/* Animation for hearts */
+@keyframes pour {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* Heart animation speed */
+.heart:nth-child(odd) {
+    animation-duration: 3s;
+}
+
+.heart:nth-child(even) {
+    animation-duration: 4s;
+}
